@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>02_data.html</title>
+    </head>
+    <body>
+        <h1>데이터, 값, Data, Value</h1>
+        <script>
+
+            // 본문(<body>)에 출력 --> document.write()
+                // document 바디에 write 출력 한다는 뜻
+                // 오른쪽으로 갈 수록 하위개념. document 안에 write라는 함수가 들어있는 것.
+            
+            
+            // 1. 숫자형
+            document.write(123);
+            document.write(456);
+            document.write(789);
+            //  document.write(); 이런 명령어는 값을 다양하게 출력할 수 있다. (body에 )
+
+
+            // 2. 문자형
+            // -> 반드시 ' 또는 " 기호로 감싼다.
+            document.write('KOREA');
+            document.write("SEOUL");
+            // 따옴표 ' " 에러 document.write('JEJU"); 
+            // 따옴표 없음 에러 document.write(대한민국);
+            /* f12 개발자모드 콘솔창 에러메세지 분석
+               Uncaught SyntaxError: Invalid or unexpected token -> 오타 에러라는 의미
+               02_data.html:27 -> 위치 (파일명:몇번째 줄)
+            */
+
+
+            // 3. 논리형 (boolean)
+            // -> 맞다(참 true), 틀리다(거짓 false) / 2가지 값만 있는 것.
+            document.write(true);
+            document.write(false);
+            document.write('true'); // 이건 따옴표때문에 논리형이 아닌 문자형
+            
+
+
+            document.write(10);      // 양의 정수 unsign 값
+            document.write(-20);     // 음의 정수 sign 값
+            document.write(3.4);     // 실수
+            document.write(-5.6); 
+            document.write("false"); // 문자형
+            document.write('1004');  // 문자형(ex.주민등록번호)
+
+
+
+        </script>
+    </body>
+</html>

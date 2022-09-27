@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>06_연산자.html</title>
+    </head>
+    <body>
+
+        <h3>연산자</h3>
+     
+        <script>
+            /*
+                ● [연산자 Operator]
+                  - 이식성이 풍부하다
+                  - 산술, 비교, 논리연산자 (순서)1.산술 2.비교 3.논리 but,괄호가 최우선
+            */
+
+            //1. 산술연산자
+            document.write(5+3);    //8
+            document.write(5-3);    //2
+            document.write(5*3);    //15
+            document.write(5/3);    //몫             1.6666666666666667
+            document.write(5%3);    //나누기의 나머지 2
+            document.write("<hr>");
+
+            document.write(3/5);    //0.6
+            document.write(3%5);    //3 (3과5 중 앞에 있는 값인 3이 떨어짐.)
+            document.write("<hr>");
+            /////////////////////////////////////////////////////////////
+
+
+            //2. 비교연산자(관계연산자)
+            // -> 논리형(boolean)으로 반환된다
+            // < > >= <= == !=
+            // -> true, false
+            document.write(5>3);    // true
+            document.write(5<3);    // false
+            document.write("<hr>");
+
+            document.write(5>=3);    // true
+            document.write(5<=3);    // false
+            document.write("<hr>");
+
+            document.write(5==3);    // false
+            document.write(5!=3);    // true
+            document.write("<hr>");
+            /////////////////////////////////////////////////////////////
+
+
+            //3. 논리연산자
+            // -> 조건이 2개이상일 경우 전체적으로 판단     ex.여자이면서 안경 낀 사람
+            // -> 결과값은 boolean값으로 반환
+            // -> 그리고, 또는, 부정                       ex.철수영희둘다/철수나영희/철수빼고영희
+            // 프로그래밍에서 0은 신호가 가지않는다는 의미이기 때문에 0이 나오면 거짓임
+
+                // 1) && 연산자 
+                // -> 그리고, and연산자, 논리곱
+                // -> 모든 조건이 true일때만 true
+                // -> ~이면서
+                document.write(5<3 && 2<4);
+                         //    false  true
+                         //    false
+                         // ex) 로그인할 때 아이디 비번 둘다 맞아야하므로 and 조건을 준다.
+
+                // 2) || 연산자, 논리합
+                // -> 또는, or연산자
+                // -> 조건들 중에서 하나만이라도 true이면 true
+                // -> ~이거나
+                document.write(5<3 || 2<4);
+                         //    false  true
+                         //    true
+
+                // 3) ! 연산자
+                // -> 논리 부정 연산자, not연산자
+                // -> ~아니라면
+                let flag=true;
+                document.write(!flag);
+                               // flag(true)가 아니라면 --> false
+                               
+
+
+        </script>
+   
+    </body>
+</html>
