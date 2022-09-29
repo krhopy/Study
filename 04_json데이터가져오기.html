@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>04_json데이터가져오기.html</title>
+        <!-- jQuery import -->
+        <script src="jquery-3.6.1.min.js"></script>
+    </head>
+    <body>
+
+        <button>* JSON 데이터 받아오기 *</button>
+        <div id="panel"></div>
+     
+        <script>
+            $("button").click(function(){
+                    //() 다양한 형태의 url이 올 수 있다./ {} 이부분은 옵션이기 때문에 필요하면 값을 넣어준다.
+                    $.ajax("sungjuk.json", {dataType:"json"
+                                        ,error:function(error){
+                                            alert("ERROR!!" + error);
+                                        }//error end
+                                        ,success:function(result){
+                                            // alert("SUCCESS!!");
+                                            // alert(result);          //서버가 응답해준 객체형태의 데이터
+                                            // alert(result.length);   //1건
+                                            let size=result.length; // size=1
+                                            let str="<table border='1'>";
+                                            for (i=0; i<size; i++){
+                                                str += "<tr>";
+                                                str += "    <td>" + result[i].name + "</td>";
+                                                str += "    <td>" + result[i].id   + "</td>";
+                                                str += "    <td>" + result[i].kor  + "</td>";
+                                                str += "    <td>" + result[i].eng  + "</td>";
+                                                str += "    <td>" + result[i].mat  + "</td>";
+                                                str += "</tr>";
+                                            }//for end
+                                            str += "</table>";
+
+                                            //$("#panel").html(str);
+                                            //$("#panel").text(str);
+                                            $("#panel").append(str); // 댓글 더보기
+                                        }//success end
+                });//ajax() end
+            });//click end       
+             
+        </script>
+
+   
+    </body>
+</html>
