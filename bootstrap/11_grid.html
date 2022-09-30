@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>11_grid.html</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            .b {border: solid 1px black;}
+        </style>
+    </head>
+    <body>
+
+        <h1>grid</h1>
+
+        <!-- 웹페이지 사이즈가 줄어도 무조건 1줄로 나옴(가로로) -->
+        <div class="container">
+            <h4 style="font-weight: bold;">col-xs- b</h4>
+            <div class="row"> <!-- 한 줄 -->
+                <div class="col-xs-6 b">col-xs-6 b</div>
+                <div class="col-xs-6 b">col-xs-6 b</div>
+            </div>
+            <div class="row"> <!-- 3칸 나옴 = 12칸을 4칸으로 나눔 --> 
+                <div class="col-xs-4 b">col-xs-4 b</div>
+                <div class="col-xs-4 b">col-xs-4 b</div>
+                <div class="col-xs-4 b">col-xs-4 b</div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- 웹페이지 사이즈가 줄면 1줄이 2줄로 나눠짐 (세로로) -->
+        <div class="container">
+            <h4 style="font-weight: bold;">col-sm- b</h4>
+            <div class="row">
+                <div class="col-sm-6 b">col-sm-6 b</div>
+                <div class="col-sm-6 b">col-sm-6 b</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 b">col-sm-4 b</div>
+                <div class="col-sm-4 b">col-sm-4 b</div>
+                <div class="col-sm-4 b">col-sm-4 b</div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="container">
+            <h4 style="font-weight: bold;">col-md- b</h4>
+            <div class="row">
+                <div class="col-md-6 b">col-md-6 b</div>  <!-- 992px 기준-->
+                <div class="col-md-6 b">col-md-6 b</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 b">col-md-4 b</div>   <!-- 992px 기준-->
+                <div class="col-md-4 b">col-md-4 b</div>
+                <div class="col-md-4 b">col-md-4 b</div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="container">
+            <h4 style="font-weight: bold;">col-lg- b</h4>
+            <div class="row">
+                <div class="col-lg-6 b">col-lg-6 b</div>  <!-- 1200px 기준-->
+                <div class="col-lg-6 b">col-lg-6 b</div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 b">col-lg-4 b</div>   <!-- 1200px 기준-->
+                <div class="col-lg-4 b">col-lg-4 b</div>
+                <div class="col-lg-4 b">col-lg-4 b</div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- 칼럼의 합이 12개 미만인 경우 -->
+        <div class="container">
+            <h4 style="font-weight: bold;">칼럼의 합이 12개 미만인 경우</h4>
+            <div class="row">
+                <div class="col-md-5 b">col-md-5 b</div>  <!-- 992px 기준-->
+                <div class="col-md-2 b">col-md-2 b</div>
+                <div class="col-md-3 b">col-md-3 b</div>
+            </div>
+        </div>
+        <hr>
+
+
+        <!-- 칼럼의 합이 12개 초과인 경우 -->
+        <div class="container">
+            <h4 style="font-weight: bold;">칼럼의 합이 12개 초과인 경우</h4>
+            <div class="row">
+                <div class="col-md-6 b">col-md-6 b</div>  <!-- 992px 기준-->
+                <div class="col-md-7 b">col-md-7 b</div>
+                <div class="col-md-3 b">col-md-3 b</div>
+            </div>
+        </div>
+        <hr>
+
+
+        <!-- 스크린 사이즈를 혼합해서 사용할 수도 있음 -->
+        <!-- 스크린이 모바일이면 sm, 웹사이즈면 lg로 선택되어 사용이 된다. -->
+        <div class="container">
+            <h4 style="font-weight: bold;">스크린 사이즈를 혼합해서 사용할 수도 있음</h4>
+            <div class="row">
+                <div class="col-lg-3 b col-md-4 b col-sm-6 b">AA</div> 
+                <div class="col-lg-3 b col-md-4 b col-sm-6 b">BB</div>
+                <div class="col-lg-3 b col-md-4 b col-sm-12 b">CC</div>
+            </div>
+        </div>
+        <hr>
+
+
+    </body>
+</html>

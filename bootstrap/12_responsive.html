@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>12_responsive.html</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            .b {border: solid 1px black;}
+        </style>
+    </head>
+    <body>
+
+        <!--
+            ● responsive util 
+              visible-mode mode일때 보이기
+              hidden-mode  mode일때 숨기기
+              offset-sm-4  빈여백으로 남김
+        -->
+
+
+        <h4 style="font-weight: bold;">visible-mode : md 모드일 때만 PYTHON 보이기</h4>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 b">JAVA</div>
+                <div class="col-md-6 b visible-md">PYTHON</div> <!-- 사이즈 992px 미만일 때 이거 사라짐 -->
+                <div class="col-md-3 b">ORACLE</div>
+            </div>
+        </div>
+        <hr>
+   
+
+        <h4 style="font-weight: bold;">hidden-mode : md 모드일때 숨기기</h4>
+        <div class="container-fluid">
+            <div class="row hidden-md">
+                <div class="col-md-3 b">col-md-3 b</div>
+                <div class="col-md-6 b">col-md-6 b</div> 
+                <div class="col-md-3 b">col-md-3 b</div>
+            </div>
+        </div>
+        <hr>
+
+
+        <h4 style="font-weight: bold;">offset : 빈여백으로 남김1</h4>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 b">col-md-4 b</div>
+                <div class="col-md-4 b col-md-offset-4">col-md-4 b</div> 
+                <div class="col-md-4 b">col-md-4 b</div>
+            </div>
+        </div>
+        <hr>
+
+        <h4 style="font-weight: bold;">offset : 빈여백으로 남김2</h4>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 b col-md-offset-4">col-md-4 b col-md-offset-4</div>
+                <div class="col-md-4 b">col-md-4 b</div>
+            </div>
+        </div>
+        <hr>
+
+        <h4 style="font-weight: bold;">row안에 row가능</h4>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 b">col-md-3 b</div>
+                <div class="col-md-6 b">
+                    <div class="row">
+                        <div class="col-md-4 b">col-md-4 b</div>
+                        <div class="col-md-4 b">col-md-4 b</div>
+                        <div class="col-md-4 b">col-md-4 b</div>
+                    </div>
+                </div>
+                <div class="col-md-3 b">col-md-3 b</div>
+            </div>  
+        </div>
+        <hr>
+
+
+    </body>
+</html>
